@@ -46,13 +46,12 @@ const App: React.FC = () => {
     setUser,
   } = useContext(AppContext);
 
-  useEffect(() => {
+  useEffect(() => {    
     getItem(StorageKeys.USER).then((user) => {
       if (user) {
         setUser(user);
       }
-      console.log(user);
-    });
+    });    
   }, []);
 
   return (
